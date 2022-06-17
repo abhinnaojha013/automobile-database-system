@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Edit " + @ViewBag.brandName + " " + @ViewBag.id;
+}
+<div>
+    <div class="flex flex-direction-vertical">
+        <div class="flex flex-centre-horizontal">
+            <div>
+                <label>Brand name:</label>
+                <input type="text" value="@ViewBag.brandName"/>
+                <input type="submit" value="Update brand" />
+            </div>
+            <div style="height:50px"></div>
+        </div
+        <div class="flex-centre-horizontal">
+            <div style="height:50px"></div>
+
+            <a asp-controller = "Brand" asp-action = "Index" class="flex-centre-horizontal">
+                <button>Go back to brands</button>
+            </a>
+        </div>
+    </div>
+</div>

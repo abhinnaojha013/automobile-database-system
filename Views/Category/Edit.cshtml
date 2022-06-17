@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Edit " + @ViewBag.categoryName + " " + @ViewBag.id;
+}
+<div>
+    <div class="flex flex-direction-vertical">
+        <div class="flex-centre-horizontal">
+            <div class="flex flex-direction-vertical">
+                <div>
+                    <label>Category name:</label>
+                    <input type="text" value="@ViewBag.categoryName"/>
+                </div>
+                <div>
+                    <label>Category type:</label>
+                    <input type="radio" name="type" value="two" checked/>2 wheeler
+                    <input type="radio" name="type" value="four" />4 wheeler
+
+                </div>
+                <div class="flex-centre-horizontal">
+                    <input type="submit" value="Update category" />
+                </div>
+                <div style="height:50px"></div>
+                <div class="flex-centre-horizontal">
+                    <a asp-controller = "Category" asp-action = "Index" class="flex-centre-horizontal">
+                        <button>Go back to categories</button>
+                    </a>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>

@@ -1,0 +1,92 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = automobile_database_system
+build_property.RootNamespace = automobile_database_system
+build_property.ProjectDir = C:\Users\Dell\Desktop\orchid\6th sem\csc_367_net_net centric computing\zzz_project\automobile database system\automobile database system\automobile database system\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Dell\Desktop\orchid\6th sem\csc_367_net_net centric computing\zzz_project\automobile database system\automobile database system\automobile database system
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Brand/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Brand/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Brand/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Main/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Main/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Shared/_MainLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/User/Signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWdudXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9bbcvutc2y

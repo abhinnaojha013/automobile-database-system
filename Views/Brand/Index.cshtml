@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Brands";
+}
+<div>
+    <div class="flex flex-direction-vertical">
+        <a asp-controller = "Brand" asp-action = "Create" class="flex-centre-horizontal">
+            <button >
+                Add a new brand
+            </button>
+        </a>
+        
+        <div class="flex-centre-horizontal">
+            <table>
+                <tr>
+                    <th>Brands</th>
+                </tr>
+                <tr>
+                    <td>
+                        Yamaha
+                    </td>
+                    <td>
+                        <a asp-controller="Brand" asp-action="Edit" asp-route-id="1">
+                            <button>
+                                Edit
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Honda
+                    </td>
+                    <td>
+                        <a asp-controller="Brand" asp-action="Edit" asp-route-id="2">
+                            <button>
+                                Edit
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+</div>

@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Automobile";
+}
+<div>
+    <div class="flex">
+        <!--motorcycle table-->
+        <div class="flex-centre-horizontal">
+            <table border="1">
+                <tr>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Yamaha</td>
+                    <td>
+                        <a asp-controller="Main" asp-action="Detail" asp-route-id="1">                     
+                            R15
+                        </a>
+                    </td>
+                    <td>400000</td>
+                </tr>
+                <tr>
+                    <td>Honda</td>
+                    <td>
+                        <a asp-controller="Main" asp-action="Detail" asp-route-id="2">                     
+                            Shine 125 SP
+                        </a>
+                    </td>
+                    <td>250000</td>
+                </tr>
+            </table>
+        </div>
+        <!--car table-->
+        <div class="flex-centre-horizontal">
+            <table border="1">
+                <tr>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Honda</td>
+                    <td>
+                        <a asp-controller="Main" asp-action="Detail" asp-route-id="3">                     
+                            Civic
+                        </a>
+                    </td>
+                    <td>3400000</td>
+                </tr>
+                <tr>
+                    <td>Skoda</td>
+                    <td>
+                        <a asp-controller="Main" asp-action="Detail" asp-route-id="3">                     
+                            Fabia
+                        </a>
+                    </td>
+                    <td>4500000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

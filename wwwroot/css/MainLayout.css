@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "fa";
+  src: url("../fonts/Font Awesome 5 Free-Solid-900.otf");
+}
+
+body {
+  margin: 20px 6vw;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+}
+
+body a {
+  cursor: pointer;
+  color: darkblue;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+body a:hover {
+  color: slateblue;
+  text-decoration: underline;
+}
+
+body button, body input {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button, input[type=submit] {
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 0 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+  background-color: bisque;
+  -webkit-transition-property: background-color, border-radius;
+  transition-property: background-color, border-radius;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+button:hover, input[type=submit]:hover {
+  background-color: burlywood;
+  border-radius: 50vw;
+}
+
+input[type=text], input[type=search], input[type=password], input[type=email] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  padding-left: 5px;
+  border: 3px solid gray;
+  border-radius: 5px;
+}
+
+input[type=text]:focus, input[type=search]:focus, input[type=password]:focus, input[type=email]:focus {
+  outline: none;
+  border: 3px solid dodgerblue;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+th {
+  padding: 20px 25px 5px;
+  font-size: 18px;
+}
+
+td {
+  padding: 5px 25px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  padding: 5px 15px;
+  margin: 5px;
+  border: 5px solid blue;
+  border-radius: 10px;
+  background-color: crimson;
+  color: white;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-delay: 10ms;
+          transition-delay: 10ms;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+h1:hover {
+  background-color: red;
+  text-decoration: underline;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-direction-vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-centre-vertical {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.flex-centre-horizontal {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.margin-bottom-px3 {
+  margin-bottom: 3px;
+}
+
+.invisible {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.centre {
+  margin: auto;
+}
+
+.border {
+  border: 2px solid black;
+}
+
+.search {
+  display: inline;
+  margin: 0;
+}
+
+.search div input {
+  width: 250px;
+}
+
+.search div button {
+  width: 40px;
+  margin: 0;
+  font-family: "fa", monospace;
+  background-color: cornflowerblue;
+  color: black;
+  border-radius: 5px;
+  -webkit-transition-property: background-color, border-radius, color;
+  transition-property: background-color, border-radius, color;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.search div button:hover {
+  background-color: darkblue;
+  border-radius: 50vw;
+  color: cornflowerblue;
+}
+
+.signup-table {
+  height: 40px;
+  margin-bottom: 3px;
+  text-align: right;
+}
+/*# sourceMappingURL=MainLayout.css.map */
