@@ -27,7 +27,7 @@ body
         }
 
     }
-    button, input
+    button, input, select
     {
         font-size: inherit;
         font-family: inherit;
@@ -59,7 +59,7 @@ button, input[type = submit]
     }
 }
 
-input[type = text], input[type = search], input[type = password], input[type = email]
+input[type = text], input[type = search], input[type = password], input[type = email], input[type = number], select
 {
     box-sizing: border-box;
 
@@ -76,6 +76,16 @@ input[type = text], input[type = search], input[type = password], input[type = e
         border: 3px solid dodgerblue;
     }
 }
+input[type = radio]
+{
+    box-sizing: border-box;
+
+    height: 40px;
+
+    padding-left: 5px;
+
+    vertical-align: middle;
+}
 label
 {
     font-size: 18px;
@@ -83,7 +93,7 @@ label
 }
 th
 {
-    padding: 20px 25px 5px;
+    padding: 5px 25px;
 
     font-size: 18px;
 }
@@ -216,15 +226,17 @@ h1
         }
     }
 }
-.signup
+.table
 {
-    &-table
+    height: 40px;
+
+    margin-bottom: 3px;
+
+    text-align: right;
+
+    &-createAuto
     {
-        height: 40px;
-
-        margin-bottom: 3px;
-
-        text-align: right;
+        vertical-align: middle;
     }
 }
 

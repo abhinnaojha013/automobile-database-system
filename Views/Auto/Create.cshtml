@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Create Automobile";
+}
+<div>
+    <div class="flex flex-direction-vertical">
+        <div class="flex flex-centre-horizontal">
+            <div class="flex flex-direction-vertical">
+                <div style="height:10px"></div>
+                <label class="table">Category type:</label>
+                <label class="table">Type:</label>
+                <label class="table">Brand:</label>
+                <label class="table">Model Name:</label>
+                <label class="table">Build Year:</label>
+                <label class="table">Engine Size:</label>
+                <label class="table">Discontinued Year:</label>
+                <label class="table">Price:</label>
+            </div>
+            <div style="width:10px"></div>  
+            <div class="flex flex-direction-vertical" style="height:40px">
+                <div class="margin-bottom-px3">
+                    <input type="radio" name="type" value="two" checked/>2 wheeler
+                    <input type="radio" name="type" value="four" />4 wheeler
+                </div>
+                <div class="margin-bottom-px3" style="height:40px">
+                    <select>
+                        <option>-select type-</option>
+                        <option>cruiser</option>
+                        <option>saloon</option>
+                    </select>
+                </div>
+                <div class="margin-bottom-px3"  >
+                    <select>
+                        <option>-select brand-</option>
+                        <option>honda</option>
+                        <option>yamaha</option>
+                    </select>
+                </div>
+                <div class="margin-bottom-px3">
+                    <input type="text" />
+                </div>
+                <div class="margin-bottom-px3">
+                    <input type="number" min="1900" max="2023"/>
+                </div>
+                <div class="margin-bottom-px3">
+                    <input type="number"/>
+                </div>
+                <div class="margin-bottom-px3">
+                    <input type="text"/>
+                </div>
+                <div class="margin-bottom-px3">
+                    <input type="number"/>
+                </div>
+            </div>
+        </div> 
+        <div class="flex flex-direction-vertical">
+            <div class="flex-centre-horizontal">
+                <input type="submit" value="Add automombile" />
+            </div>
+            <div style="height:50px"></div>
+            <div class="flex-centre-horizontal">
+                <a asp-controller = "Auto" asp-action = "Index" class="flex-centre-horizontal">
+                    <button>Go back to Automobile</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

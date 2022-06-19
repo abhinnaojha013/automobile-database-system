@@ -5,6 +5,13 @@
     ViewBag.Title = "Automobile";
 }
 <div>
+    <div class="flex flex-centre-horizontal">
+        <div class="flex-centre-horizontal">
+            <a asp-controller = "Auto" asp-action = "Create" class="flex-centre-horizontal">
+                <button>Add Automobile</button>
+            </a>
+        </div>
+    </div>
     <div class="flex">
         <!--motorcycle table-->
         <div class="flex-centre-horizontal">
@@ -17,7 +24,7 @@
                 <tr>
                     <td>Yamaha</td>
                     <td>
-                        <a asp-controller="Main" asp-action="Details" asp-route-id="1">                     
+                        <a asp-controller="Auto" asp-action="Details" asp-route-id="1">                     
                             R15
                         </a>
                     </td>
@@ -26,7 +33,7 @@
                 <tr>
                     <td>Honda</td>
                     <td>
-                        <a asp-controller="Main" asp-action="Details" asp-route-id="2">                     
+                        <a asp-controller="Auto" asp-action="Details" asp-route-id="2">                     
                             Shine 125 SP
                         </a>
                     </td>
@@ -45,7 +52,7 @@
                 <tr>
                     <td>Honda</td>
                     <td>
-                        <a asp-controller="Main" asp-action="Details" asp-route-id="3">                     
+                        <a asp-controller="Auto" asp-action="Details" asp-route-id="3">                     
                             Civic
                         </a>
                     </td>
@@ -54,7 +61,7 @@
                 <tr>
                     <td>Skoda</td>
                     <td>
-                        <a asp-controller="Main" asp-action="Details" asp-route-id="3">                     
+                        <a asp-controller="Auto" asp-action="Details" asp-route-id="3">                     
                             Fabia
                         </a>
                     </td>

@@ -15,6 +15,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Dell\Desktop\orchid\6th sem\csc_367_net_net centric computing\zzz_project\automobile database system\automobile database system\automobile database system
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Auto/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Auto/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Auto/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Dell/Desktop/orchid/6th sem/csc_367_net_net centric computing/zzz_project/automobile database system/automobile database system/automobile database system/Views/Brand/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
