@@ -1,7 +1,14 @@
+using automobile_database_system.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+string connectionString = "Data Source=WINDOWS-N2M7L49;Initial Catalog=VehicleDB;Integrated Security=True";
+builder.Services.AddDbContext<VehicleDatabaseContext>(options => options.UseSqlServer(connectionString));
+
 
 var app = builder.Build();
 

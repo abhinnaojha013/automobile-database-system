@@ -2,32 +2,35 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewBag.Title = "Edit " + @ViewBag.categoryName + " " + @ViewBag.id;
+    ViewBag.Title = "Edit Category";
 }
-<div>
+@model automobile_database_system.Models.Category;
+<div>  
     <div class="flex flex-direction-vertical">
         <div class="flex-centre-horizontal">
-            <div class="flex flex-direction-vertical">
-                <div>
-                    <label>Category name:</label>
-                    <input type="text" value="@ViewBag.categoryName"/>
+            <form method="POST" asp-controller="Category" asp-action="Edit">
+                <input type="hidden" asp-for="Id" />
+                <div class="flex flex-direction-vertical">
+                    <div>
+                        <label asp-for="Name">Category name:</label>
+                        <input type="text" asp-for="Name" />
+                    </div>
+                    <div>
+                        <label asp-for="Type">Category type:</label>
+                        <input type="radio" name="type" value="2" checked/>2 wheeler
+                        <input type="radio" name="type" value="4" />4 wheeler
+                    </div>
+                    <div class="flex-centre-horizontal">
+                        <input type="submit" value="Update category" />
+                    </div>
+                    <div style="height:50px"></div>
                 </div>
-                <div>
-                    <label>Category type:</label>
-                    <input type="radio" name="type" value="two" checked/>2 wheeler
-                    <input type="radio" name="type" value="four" />4 wheeler
-
-                </div>
-                <div class="flex-centre-horizontal">
-                    <input type="submit" value="Update category" />
-                </div>
-                <div style="height:50px"></div>
-                <div class="flex-centre-horizontal">
-                    <a asp-controller = "Category" asp-action = "Index" class="flex-centre-horizontal">
-                        <button>Go back to categories</button>
-                    </a>
-                </div>
-            </div>
-        </div> 
+            </form>
+        </div>
+        <div class="flex-centre-horizontal">
+            <a asp-controller = "Category" asp-action = "Index" class="flex-centre-horizontal">
+                <button>Go back to categories</button>
+            </a>
+        </div>
     </div>
 </div>

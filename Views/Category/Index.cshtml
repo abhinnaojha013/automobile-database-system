@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Categories";
 }
+@model IEnumerable<automobile_database_system.Models.Category>;
 <div>
     <div class="flex flex-direction-vertical">
         <a asp-controller = "Category" asp-action = "Create" class="flex-centre-horizontal">
@@ -18,36 +19,25 @@
                     <th>Category</th>
                     <th>Type</th>
                 </tr>
-                <tr>
-                    <td>
-                        Cruiser
-                    </td>
-                    <td>
-                        2 wheeler
-                    </td>
-                    <td>
-                        <a asp-controller="Category" asp-action="Edit" asp-route-id="1">
-                            <button>
-                                Edit
-                            </button>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Saloon
-                    </td>
-                    <td>
-                        4 wheeler
-                    </td>
-                    <td>
-                        <a asp-controller="Category" asp-action="Edit" asp-route-id="2">
-                            <button>
-                                Edit
-                            </button>
-                        </a>
-                    </td>
-                </tr>
+                @foreach(var c in Model)
+                {
+                    <tr>
+                        <td>
+                            @c.Name
+                        </td>
+                        <td>
+                            @c.Type wheeler
+                        </td>
+                        <td>
+                            <a asp-controller="Category" asp-action="Edit" asp-route-id="@c.Id">
+                                <button>
+                                    Edit
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                }
             </table>
         </div>
+    </div>
 </div>

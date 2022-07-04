@@ -1,16 +1,26 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using automobile_database_system.Models;
 
 namespace automobile_database_system.Controllers
 {
     public class AutoController : Controller
     {
+        public VehicleDatabaseContext _context;
+        public AutoController(VehicleDatabaseContext context)
+        {
+            _context = context;
+        }
+
+
         // GET: AutoController
         public ActionResult Index()
         {
             ViewBag.Controller = "User";
             ViewBag.Action = "Index";
-            return View();
+
+            var autos = _context.Autos.ToList();
+            return View(autos);
         }
 
         // GET: AutoController/Details/5
@@ -18,7 +28,11 @@ namespace automobile_database_system.Controllers
         {
             ViewBag.Controller = "User";
             ViewBag.Action = "Index";
-            return View();
+
+            Auto auto = new Auto();
+            auto = _context.Autos.SingleOrDefault(autos => autos.Id == id);
+            ViewData["auto"] = auto;
+            return View(auto);
         }
 
         // GET: AutoController/Create
@@ -26,17 +40,38 @@ namespace automobile_database_system.Controllers
         {
             ViewBag.Controller = "User";
             ViewBag.Action = "Index";
+
             return View();
         }
 
         // POST: AutoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Auto auto)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if(ModelState.IsValid)
+                {
+                    var a = new Auto()
+                    {
+                        VehicleType = auto.VehicleType,
+                        Category = auto.Category,
+                        Brand = auto.Brand,
+                        ModelName = auto.ModelName,
+                        BuildYear = auto.BuildYear,
+                        EngineSize = auto.EngineSize,
+                        Price = auto.Price
+                    };
+                    _context.Autos.Add(a);
+                    _context.SaveChanges();
+                    TempData["msg"] = "Success";
+                }
+                else
+                {
+                    TempData["error"] = "Not Valid";
+                }
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -49,17 +84,29 @@ namespace automobile_database_system.Controllers
         {
             ViewBag.Controller = "User";
             ViewBag.Action = "Index";
-            return View();
+
+            var autos = _context.Autos.SingleOrDefault(autos => autos.Id == id);
+            return View(autos);
         }
 
         // POST: AutoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Auto autos)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Autos.Update(autos);
+                    _context.SaveChanges();
+                }
+                else
+                {
+                    TempData["error"] = "Not Valid";
+                }
+                return RedirectToAction("Index");
+
             }
             catch
             {
@@ -70,22 +117,10 @@ namespace automobile_database_system.Controllers
         // GET: AutoController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
-        }
-
-        // POST: AutoController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var auto = _context.Autos.SingleOrDefault(autos => autos.Id == id);
+            _context.Autos.Remove(auto);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

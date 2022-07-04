@@ -4,8 +4,22 @@
 @{
     ViewBag.Title = "Automobile";
 }
+@model IEnumerable<automobile_database_system.Models.Auto>;
+
 <div>
-    <div class="flex flex-centre-horizontal">
+    <div class="flex flex-direction-vertical">
+        @if(TempData["msg"] is not null)
+        {
+            <div class="flex-centre-horizontal">
+                @TempData["msg"]
+            </div> 
+        }
+        @if(TempData["error"] is not null)
+        {
+            <div class="flex-centre-horizontal">
+                @TempData["error"]
+            </div> 
+        }
         <div class="flex-centre-horizontal">
             <a asp-controller = "Auto" asp-action = "Create" class="flex-centre-horizontal">
                 <button>Add Automobile</button>
@@ -19,26 +33,26 @@
                 <tr>
                     <th>Brand</th>
                     <th>Model</th>
+                    <th>Year</th>
                     <th>Price</th>
                 </tr>
-                <tr>
-                    <td>Yamaha</td>
-                    <td>
-                        <a asp-controller="Auto" asp-action="Details" asp-route-id="1">                     
-                            R15
-                        </a>
-                    </td>
-                    <td>400000</td>
-                </tr>
-                <tr>
-                    <td>Honda</td>
-                    <td>
-                        <a asp-controller="Auto" asp-action="Details" asp-route-id="2">                     
-                            Shine 125 SP
-                        </a>
-                    </td>
-                    <td>250000</td>
-                </tr>
+                @foreach(var a in Model)
+                {
+                    @if(a.VehicleType == 2)
+                    {
+                        <tr>
+                            <td>@a.Brand</td>
+                            <td>
+                                <a asp-controller="Auto" asp-action="Details" asp-route-id="@a.Id">
+                                    @a.ModelName
+                                </a>
+                            </td>
+                            <td>@a.BuildYear</td>
+                            <td>@a.Price</td>
+                        </tr>
+                    }
+                    
+                }
             </table>
         </div>
         <!--car table-->
@@ -47,26 +61,26 @@
                 <tr>
                     <th>Brand</th>
                     <th>Model</th>
+                    <th>Year</th>
                     <th>Price</th>
                 </tr>
-                <tr>
-                    <td>Honda</td>
-                    <td>
-                        <a asp-controller="Auto" asp-action="Details" asp-route-id="3">                     
-                            Civic
-                        </a>
-                    </td>
-                    <td>3400000</td>
-                </tr>
-                <tr>
-                    <td>Skoda</td>
-                    <td>
-                        <a asp-controller="Auto" asp-action="Details" asp-route-id="3">                     
-                            Fabia
-                        </a>
-                    </td>
-                    <td>4500000</td>
-                </tr>
+                @foreach(var a in Model)
+                {
+                    @if(a.VehicleType == 4)
+                    {
+                        <tr>
+                            <td>@a.Brand</td>
+                            <td>
+                                <a asp-controller="Auto" asp-action="Details" asp-route-id="@a.Id">
+                                    @a.ModelName
+                                </a>
+                            </td>
+                            <td>@a.BuildYear</td>
+                            <td>@a.Price</td>
+                        </tr>
+                    }
+                    
+                }
             </table>
         </div>
     </div>

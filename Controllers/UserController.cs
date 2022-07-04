@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using automobile_database_system.Models;
 
 namespace automobile_database_system.Controllers
 {
     public class UserController : Controller
     {
+        public VehicleDatabaseContext _context;
+        public UserController(VehicleDatabaseContext context)
+        {
+            _context = context;
+        }
+
+
         // GET: UserController
         public ActionResult Index()
         {
@@ -37,7 +45,7 @@ namespace automobile_database_system.Controllers
         // POST: UserController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(User user)
         {
             try
             {

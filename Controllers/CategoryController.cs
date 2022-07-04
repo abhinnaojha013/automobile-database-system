@@ -1,16 +1,26 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using automobile_database_system.Models;
 
 namespace automobile_database_system.Controllers
 {
     public class CategoryController : Controller
     {
+        public VehicleDatabaseContext _context;
+        public CategoryController(VehicleDatabaseContext context)
+        {
+            _context = context;
+        }
+
+
         // GET: CategoryController
         public ActionResult Index()
         {
             ViewBag.Controller = "User";
             ViewBag.Action = "Index";
-            return View();
+
+            var categories = _context.Categories.ToList();
+            return View(categories);
         }
 
         // GET: CategoryController/Create
@@ -24,11 +34,22 @@ namespace automobile_database_system.Controllers
         // POST: CategoryController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Category category)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    var c = new Category()
+                    {
+                        Name = category.Name,
+                        Type = category.Type
+                    };
+                    _context.Categories.Add(c);
+                    _context.SaveChanges();
+                    TempData["msg"] = "Success";
+                }
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -41,24 +62,29 @@ namespace automobile_database_system.Controllers
         {
             ViewBag.Controller = "User";
             ViewBag.Action = "Index";
-            ViewBag.Id = id;
-            ViewBag.categoryName = "Cruiser";
-            return View(id);
+
+            var categories = _context.Categories.SingleOrDefault(categories => categories.Id == id);
+            return View(categories);
         }
 
         // POST: CategoryController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Category categories)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Categories.Update(categories);
+                    _context.SaveChanges();
+                }
             }
             catch
             {
                 return View();
             }
+            return RedirectToAction("Index");
         }
     }
 }

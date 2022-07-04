@@ -4,16 +4,19 @@
 @{
     ViewBag.Title = "Create Brand";
 }
+@model automobile_database_system.Models.Brand;
 <div>
     <div class="flex flex-direction-vertical">
         <div class="flex flex-centre-horizontal">
-            <div>
-                <label>Brand name:</label>
-                <input type="text" />
-                <input type="submit" value="Add brand" />
-            </div>
-            <div style="height:50px"></div>
-        </div
+            <form method="POST" asp-controller="Brand" asp-action="Create">
+                <div>
+                    <label asp-for="BrandName">Brand name:</label>
+                    <input type="text" asp-for="BrandName" />
+                    <input type="submit" value="Add brand" />
+                </div>
+                <div style="height:50px"></div>
+            </form>
+        </div>
         <div class="flex-centre-horizontal">
             <div style="height:50px"></div>
 

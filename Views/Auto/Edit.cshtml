@@ -1,0 +1,84 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewBag.Title = "Edit Automobile";
+}
+@model automobile_database_system.Models.Auto;
+<div>
+    <div class="flex flex-direction-vertical">
+        <form method="POST" asp-controller="Auto" asp-action="Create">
+            <input type="hidden" asp-for="Id" />
+            <div class="flex flex-direction-vertical">
+                <div class="flex flex-centre-horizontal">
+                    <div class="flex flex-direction-vertical">
+                        <div style="height:10px"></div>
+                        <label class="table" asp-for="VehicleType">Vehicle type:</label>
+                        <label class="table" asp-for="Category">Category:</label>
+                        <label class="table" asp-for="Brand">Brand:</label>
+                        <label class="table" asp-for="ModelName">Model Name:</label>
+                        <label class="table" asp-for="BuildYear">Build Year:</label>
+                        <label class="table" asp-for="EngineSize">Engine Size:</label>
+                        <label class="table" asp-for="DiscontinuedYear">Discontinued Year:</label>
+                        <label class="table" asp-for="Price">Price:</label>
+                    </div>
+                    <div style="width:10px"></div>  
+                    <div class="flex flex-direction-vertical" style="height:40px">
+                        <div class="margin-bottom-px3">
+                            <input type="radio" asp-for="VehicleType" value="2" checked/>2 wheeler
+                            <input type="radio" asp-for="VehicleType" value="4" />4 wheeler
+                        </div>
+                        <div class="margin-bottom-px3" style="height:40px">
+                            <select asp-for="Category">
+                                <option>-select category-</option>
+                                <option>cruiser</option>
+                                <option>saloon</option>
+                            </select>
+                            <span class="text-danger" asp-validation-for="Category"></span>
+                        </div>
+                        <div class="margin-bottom-px3"  >
+                            <select asp-for="Brand">
+                                <option>-select brand-</option>
+                                <option>honda</option>
+                                <option>yamaha</option>
+                            </select>
+                            <span class="text-danger" asp-validation-for="Brand"></span>
+                        </div>
+                        <div class="margin-bottom-px3">
+                            <input type="text" asp-for="ModelName"/>
+                            <span class="text-danger" asp-validation-for="ModelName"></span>
+                        </div>
+                        <div class="margin-bottom-px3">
+                            <input type="number" min="1900" max="2023" asp-for="BuildYear"/>
+                            <span class="text-danger" asp-validation-for="BuildYear"></span>
+                        </div>
+                        <div class="margin-bottom-px3">
+                            <input type="number" asp-for="EngineSize"/>
+                            <span class="text-danger" asp-validation-for="EngineSize"></span>
+                        </div>
+                        <div class="margin-bottom-px3">
+                            <input type="number" asp-for="DiscontinuedYear"/>
+                            <span class="text-danger" asp-validation-for="DiscontinuedYear"></span>
+                        </div>
+                        <div class="margin-bottom-px3">
+                            <input type="number" asp-for="Price"/>
+                            <span class="text-danger" asp-validation-for="Price"></span>
+                        </div>
+                    </div>
+                </div> 
+                <div class="flex flex-direction-vertical">
+                    <div class="flex-centre-horizontal">
+                        <input type="submit" value="Update" />
+                    </div>
+                    <div style="height:50px"></div>
+                </div>
+            </div>
+        </form>
+        <div class="flex-centre-horizontal">
+            <a asp-controller = "Auto" asp-action = "Index" class="flex-centre-horizontal">
+                <button>Go back to Automobile</button>
+            </a>
+        </div>
+    </div>
+</div>

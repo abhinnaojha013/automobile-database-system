@@ -4,49 +4,63 @@
 @{
     ViewBag.Title = @ViewBag.Auto + " " + @ViewBag.id;
 }
+@model automobile_database_system.Models.Auto;
+
 <div>
     <div class="flex">
         <div class="flex-centre-horizontal">
             <table>
                 <tr>
                     <th>Brand</th>
-                    <td>Jawa</td>
+                    <td>@Model.Brand</td>
                 </tr>
                 <tr>
                     <th>Model</th>
-                    <td>Classic</td>
+                    <td>@Model.ModelName</td>
                 </tr>
                 <tr>
                     <th>Build year</th>
-                    <td>2015</td>
+                    <td>@Model.BuildYear</td>
                 </tr>
                 <tr>
                     <th>Type</th>
-                    <td>Cruiser</td>
+                    <td>@Model.VehicleType</td>
+                </tr>
+                <tr>
+                    <th>Category</th>
+                    <td>@Model.Category</td>
                 </tr>
                 <tr>
                     <th>Engine size</th>
-                    <td>293.4cc</td>
+                    <td>@Model.EngineSize</td>
                 </tr>
                 <tr>
                     <th>Discontinued</th>
-                    <td>No</td>
+                        
+                    @if(Model.DiscontinuedYear == 0)
+                    {
+                        <td>NA</td>
+                    }
+                    @if(Model.DiscontinuedYear != 0)
+                    {
+                        <td>@Model.DiscontinuedYear</td>
+                    }
                 </tr>
                 <tr>
                     <th>Price</th>
-                    <td>650000</td>
+                    <td>@Model.Price</td>
                 </tr>
                 <tr>
                     <th></th>
                     <td>
-                        <a>
+                        <a asp-controller="Auto" asp-action="Edit" asp-route-id="@Model.Id">
                             <button>Edit</button>
                         </a>
-                        <a>
+                        <a asp-controller="Auto" asp-action="Delete" asp-route-id="@Model.Id">
                             <button>Delete</button>
                         </a>
                     </td>
-                </tr>
+                </tr> 
             </table>
         </div>
     </div>
